@@ -30,6 +30,5 @@ module.exports = {
             "singleline": "never",
             "multiline": "never"
         }],
-        /* eslint-disable @typescript-eslint/no-unused-vars */
     },
 };

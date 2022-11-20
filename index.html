@@ -1,40 +1,41 @@
 <!DOCTYPE html>
 <html lang="zh">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit=cover" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit=cover" />
     <title>Vite App</title>
-    <link rel="stylesheet" href="/src/index.css" />
-  </head>
-  <body>
+    <link rel="stylesheet" href="src/index.css" />
+</head>
+
+<body>
     <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="src/main.ts"></script>
     <script>
-      document.addEventListener('touchstart',function (event) {
-       
-        if(event.touches.length>1){
-          event.preventDefault();
-        }
-      });
+        document.addEventListener('touchstart', function(event) {
 
-      var lastTouchEnd=0;
+            if (event.touches.length > 1) {
+                event.preventDefault();
+            }
+        });
 
-      document.addEventListener('touchend',function (event) {
-        var now=(new Date()).getTime();
-        if(now-lastTouchEnd<=300){
-          event.preventDefault();
-        }
+        var lastTouchEnd = 0;
 
-        lastTouchEnd=now;
+        document.addEventListener('touchend', function(event) {
+            var now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
 
-      },false);
+            lastTouchEnd = now;
 
-      document.addEventListener('gesturestart', function (event) {
-        event.preventDefault();
-      });
+        }, false);
 
-  </script>
-  </body>
+        document.addEventListener('gesturestart', function(event) {
+            event.preventDefault();
+        });
+    </script>
+</body>
+
 </html>
